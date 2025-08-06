@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Event Registration</title>
+  <link rel="stylesheet" href="form_valid.css">
+</head>
+<body>
+  <form id="registrationForm" novalidate>
+    <h2>Community Event Registration</h2>
+
+    <label for="name">Name*</label>
+    <input type="text" id="name" required>
+    <span class="error" id="nameError"></span>
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" required>
+    <span class="error" id="emailError"></span>
+
+    <label for="phone">Phone Number*</label>
+    <input type="text" id="phone" maxlength="10" required>
+    <span class="error" id="phoneError"></span>
+
+    <label for="age">Age*</label>
+    <input type="number" id="age" required min="18">
+    <span class="error" id="ageError"></span>
+
+    <label>Interests*</label>
+    <div class="checkbox-group" id="interestsGroup">
+      <label><input type="checkbox" name="interests" value="Sports"> Sports</label>
+      <label><input type="checkbox" name="interests" value="Music"> Music</label>
+      <label><input type="checkbox" name="interests" value="Art"> Art</label>
+      <label><input type="checkbox" name="interests" value="Tech"> Tech</label>
+    </div>
+    <span class="error" id="interestsError"></span>
+
+    <button type="submit">Register</button>
+  </form>
+  <script src="form_valid.js"></script>
+</body>
+</html>
